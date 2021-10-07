@@ -1,11 +1,11 @@
 name: Matrix
-on: push
+on: [ push, pull_request ]
 
 jobs:
   node-version:
     strategy: 
       matrix:
-        os: [ macos-latest, ubuntu-lates, windows-lates ]
+        os: [ macos-latest, ubuntu-latest, windows-latest ]
         node_version: [ 6, 8 ,10 ]
         include: 
           - os: ubuntu-latest
